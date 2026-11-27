@@ -1,0 +1,85 @@
+"TC ID","Category","Requirement","Scenario","Pre-conditions","Steps","Test Data","Expected","Actual","Status","Priority"
+"TC-001","Happy path","R-01","Valid standard user logs in","Login page open","1. Enter username and password
+2. Click Login","standard_user / secret_sauce","Products page opens and lists 6 products","Products page opened, 6 products listed","Pass","High"
+"TC-002","Happy path","R-04","Catalogue shows name, price and a distinct image for every product","Logged in as standard_user","1. Open the products page
+2. Inspect each product tile","standard_user","6 tiles; each has a name, a price and its own product image (6 different image files)","6 tiles, 6 distinct images","Pass","High"
+"TC-003","Happy path","R-05","Sort products by name Z to A","Logged in as standard_user","1. Open the sort dropdown
+2. Select ""Name (Z to A)""","standard_user","Products are listed in reverse alphabetical order","First product: ""Test.allTheThings() T-Shirt (Red)""; last: ""Sauce Labs Backpack""","Pass","Medium"
+"TC-004","Happy path","R-05","Sort products by price low to high","Logged in as standard_user","1. Select ""Price (low to high)""","standard_user","Prices are in ascending numeric order","Prices: $7.99, $9.99, $15.99, $15.99, $29.99, $49.99","Pass","Medium"
+"TC-005","Happy path","R-06","Product detail page matches the product that was clicked","Logged in as standard_user","1. Note name and price of the first product
+2. Click its name
+3. Compare detail page","standard_user, first product","Detail page shows the same name and price","Detail shows ""Sauce Labs Backpack"" $29.99","Pass","Medium"
+"TC-006","Happy path","R-07","Add three products to the cart","Logged in as standard_user, cart empty","1. Click Add to cart on the first three products
+2. Open the cart","standard_user","Badge shows 3, buttons turn into Remove, cart lists the 3 products","Badge 3, 3 Remove buttons, 3 items in cart","Pass","High"
+"TC-007","Happy path","R-07","Remove a product from the cart page","standard_user with 2 products in cart","1. Open the cart
+2. Click Remove on the first product","standard_user","Product disappears from the cart and the badge drops to 1","1 item left, badge 1","Pass","High"
+"TC-008","Happy path","R-10","Complete a purchase end to end","Logged in as standard_user","1. Add one product
+2. Open cart, Checkout
+3. Enter first name, last name, postal code
+4. Continue, then Finish","standard_user; Ammar / Tester / 11181","""Thank you for your order!"" is shown and the cart badge is cleared","Header ""Thank you for your order!"", badge empty","Pass","Critical"
+"TC-009","Happy path","R-03","Logout ends the session","Logged in as standard_user","1. Open menu, click Logout
+2. Request /inventory.html directly","standard_user","Login page shown; the direct request is refused with a ""must be logged in"" message","Message: Epic sadface: You can only access '/inventory.html' when you are logged in.","Pass","High"
+"TC-010","Business rules","R-09","Order overview totals: item total, 8% tax, grand total","standard_user, two products in cart","1. Add the first two products
+2. Go through checkout to the overview
+3. Compare item total, tax and total with the product prices","standard_user; $29.99 + $9.99 (tax rate 8% is observed behaviour, rounded to cents)","Item total = sum of prices; tax = 8% rounded to 2 decimals; total = item total + tax","Item total $39.98, tax $3.2, total $43.18 (expected item total $39.98)","Pass","Critical"
+"TC-011","Business rules","R-11","Cart contents survive navigation to a detail page and back","Logged in as standard_user","1. Add the first product
+2. Open its detail page
+3. Click Back to products","standard_user","Badge still shows 1 and the product still offers Remove","Badge 1, 1 Remove button","Pass","Medium"
+"TC-012","Business rules","R-11","Cancel on checkout step one returns to the cart with items intact","standard_user, one product in cart","1. Open checkout step one
+2. Click Cancel","standard_user","Cart page opens and still lists the product","URL /cart.html, 1 item","Pass","Medium"
+"TC-013","Business rules","R-11","Reset App State empties the cart","standard_user, two products in cart","1. Open menu
+2. Click Reset App State","standard_user","Badge disappears and all buttons show Add to cart","Badge empty; 4 of 6 buttons show Add to cart, the rest still show Remove until reload. See F-04","Fail","Medium"
+"TC-014","Business rules","R-03","Protected page cannot be opened without logging in","No session","1. Open /inventory.html directly in a new browser context","-","Redirected to login with an ""only access when logged in"" message","Message: Epic sadface: You can only access '/inventory.html' when you are logged in.","Pass","High"
+"TC-015","Business rules","R-08","Checkout is not possible with an empty cart","standard_user, cart empty","1. Open the cart
+2. Click Checkout
+3. Enter valid details and continue","standard_user; Ammar / Tester / 11181","Checkout is blocked or the user is told the cart is empty","Checkout step one opened; overview reached with 0 items (/checkout-step-two.html). See F-01","Fail","High"
+"TC-016","Business rules","R-02","Locked out user cannot log in","Login page open","1. Enter locked-out credentials
+2. Click Login","locked_out_user / secret_sauce","Stays on login; message ""Sorry, this user has been locked out.""","Message: Epic sadface: Sorry, this user has been locked out.","Pass","High"
+"TC-017","Negative / edge","R-02","Valid username, wrong password","Login page open","1. Enter username and a wrong password
+2. Click Login","standard_user / wrong_pass","Generic message ""Username and password do not match any user in this service"" (no hint which field is wrong)","Message: Epic sadface: Username and password do not match any user in this service","Pass","High"
+"TC-018","Negative / edge","R-02","Unknown username, valid password","Login page open","1. Enter an unknown username and the valid password
+2. Click Login","nobody_here / secret_sauce","Same generic ""do not match"" message as TC-017","Message: Epic sadface: Username and password do not match any user in this service","Pass","Medium"
+"TC-019","Negative / edge","R-02","Empty username","Login page open","1. Leave username empty, enter password
+2. Click Login","(empty) / secret_sauce","""Username is required""","Message: Epic sadface: Username is required","Pass","Medium"
+"TC-020","Negative / edge","R-02","Empty password","Login page open","1. Enter username, leave password empty
+2. Click Login","standard_user / (empty)","""Password is required""","Message: Epic sadface: Password is required","Pass","Medium"
+"TC-021","Negative / edge","R-02","Both fields empty: username error takes precedence","Login page open","1. Click Login with both fields empty","(empty) / (empty)","""Username is required"" (first missing field is reported)","Message: Epic sadface: Username is required","Pass","Low"
+"TC-022","Negative / edge","R-02","Username is case sensitive","Login page open","1. Enter username in a different case
+2. Click Login","Standard_User / secret_sauce","Login rejected with the ""do not match"" message","Message: Epic sadface: Username and password do not match any user in this service","Pass","Medium"
+"TC-023","Negative / edge","R-02","Username with a leading space is not silently trimmed","Login page open","1. Enter "" standard_user"" with a leading space
+2. Click Login",""" standard_user"" / secret_sauce","Login rejected with the ""do not match"" message","Message: Epic sadface: Username and password do not match any user in this service","Pass","Medium"
+"TC-024","Negative / edge","R-02","SQL-injection style input is rejected safely","Login page open","1. Enter an injection string as username
+2. Click Login","' OR '1'='1' -- / secret_sauce","Login rejected with the normal message; no error page, no access","Message: Epic sadface: Username and password do not match any user in this service","Pass","High"
+"TC-025","Negative / edge","R-08","First name empty (invalid partition)","standard_user at checkout step one","1. Leave first name empty, fill the others
+2. Click Continue",""""" / Tester / 11181","""Error: First Name is required"" and no navigation","Message: Error: First Name is required","Pass","High"
+"TC-026","Negative / edge","R-08","Last name empty (invalid partition)","standard_user at checkout step one","1. Leave last name empty, fill the others
+2. Click Continue","Ammar / """" / 11181","""Error: Last Name is required"" and no navigation","Message: Error: Last Name is required","Pass","High"
+"TC-027","Negative / edge","R-08","Postal code empty (invalid partition)","standard_user at checkout step one","1. Leave postal code empty, fill the others
+2. Click Continue","Ammar / Tester / """"","""Error: Postal Code is required"" and no navigation","Message: Error: Postal Code is required","Pass","High"
+"TC-028","Negative / edge","R-08","All three fields empty: first-name error takes precedence","standard_user at checkout step one","1. Click Continue with an empty form",""""" / """" / """"","""Error: First Name is required""","Message: Error: First Name is required","Pass","Low"
+"TC-029","Negative / edge","R-08","Lower boundary: one-character values are accepted","standard_user at checkout step one","1. Enter 1 character in every field
+2. Click Continue","A / B / 1","Overview page opens","URL /checkout-step-two.html","Pass","Medium"
+"TC-030","Negative / edge","R-08","Whitespace-only first name is treated as empty","standard_user at checkout step one","1. Enter three spaces as first name, valid last name and postal code
+2. Click Continue","""   "" / Tester / 11181","""Error: First Name is required"" and no navigation","Moved on to /checkout-step-two.html with a blank first name. See F-02","Fail","Medium"
+"TC-031","Negative / edge","R-08","Very long first name (300 characters) does not break the flow","standard_user at checkout step one","1. Enter 300 ""A"" as first name
+2. Continue and inspect the overview","300 x ""A"" / Tester / 11181","Either a clear length error, or the overview opens with an intact layout","Accepted, overview opened; no maximum length enforced (observation)","Pass","Low"
+"TC-032","Negative / edge","R-08","Alphanumeric postal code with a space is accepted","standard_user at checkout step one","1. Enter a UK-style postal code
+2. Click Continue","Ammar / Tester / SW1A 1AA","Overview page opens (postal codes are not always numeric)","URL /checkout-step-two.html","Pass","Low"
+"TC-033","Negative / edge","R-04","problem_user: every product shows its own image","Login page open","1. Log in as problem_user
+2. Inspect product images","problem_user","6 different product images","1 distinct image file(s) across 6 tiles. See BUG-01","Fail","High"
+"TC-034","Negative / edge","R-05","problem_user: sorting Name (Z to A) reorders the list","Logged in as problem_user","1. Select ""Name (Z to A)""","problem_user","Products listed in reverse alphabetical order","First product after sort: ""Sauce Labs Backpack"". See BUG-02","Fail","High"
+"TC-035","Negative / edge","R-08","problem_user: last name field accepts typed text","problem_user with one product in cart","1. Open checkout step one
+2. Type ""Tester"" in Last Name
+3. Click Continue","problem_user; Ammar / Tester / 11181","Last name shows ""Tester""; Continue opens the overview","Last name field contains """"; message: Error: Last Name is required. See BUG-03","Fail","Critical"
+"TC-036","Negative / edge","R-07","problem_user: add three products, then remove one","Logged in as problem_user","1. Click Add to cart on the first three products
+2. Click Remove on the first product","problem_user","Badge shows 3 after adding and 2 after removing","Badge after add: 2; after remove: 2. See BUG-04","Fail","High"
+"TC-037","Negative / edge","R-10","error_user: complete a purchase","Logged in as error_user","1. Add one product
+2. Checkout with Ammar / Tester / 11181
+3. Click Finish","error_user; Ammar / Tester / 11181","""Thank you for your order!"" is shown","Final URL /checkout-step-two.html; confirmation not shown. See BUG-05","Fail","Critical"
+"TC-038","Negative / edge","R-13","visual_user: prices equal the standard catalogue prices","Login page open","1. Log in as standard_user, note prices
+2. Log in as visual_user, compare","standard_user vs visual_user","Identical prices for each product","standard: $29.99 $9.99 $15.99 $49.99 $7.99 $15.99 | visual: $27.51 $40.96 $0.1 $9.32 $88.53 $78.72. See BUG-06","Fail","High"
+"TC-039","Negative / edge","R-13","visual_user: layout matches the standard layout","Login page open","1. Compare Add to cart button positions of all tiles for both users","standard_user vs visual_user, 1280x900","Every button is at the same position as for standard_user","Shifted button(s): tile 6: 1029,843 vs 975,843. See BUG-07","Fail","Medium"
+"TC-040","Negative / edge","R-12","performance_glitch_user: login completes within 2 seconds","Login page open","1. Log in as performance_glitch_user
+2. Measure click-to-product-list time","performance_glitch_user; threshold 2000 ms (assumed, no SLA published)","Product list visible in 2000 ms or less","Login took 5215 ms. See BUG-08","Fail","Medium"
+"TC-041","Negative / edge","R-06","problem_user: clicking a product opens that product","Logged in as problem_user","1. Click ""Sauce Labs Backpack""
+2. Read the detail page title","problem_user","Detail page for Sauce Labs Backpack","Detail page shows ""Sauce Labs Fleece Jacket"". See F-03","Fail","Medium"

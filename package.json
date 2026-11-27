@@ -1,0 +1,22 @@
+﻿{
+    "name":  "manual-testing-case-study",
+    "version":  "1.0.0",
+    "description":  "Manual / SIT testing case study of saucedemo.com: test plan, risk analysis, test design, cases, bug reports, evidence",
+    "directories":  {
+                        "doc":  "docs"
+                    },
+    "scripts":  {
+                    "run:cases":  "node scripts/run-cases.js",
+                    "verify:bugs":  "node scripts/verify-bugs.js",
+                    "build:docs":  "node scripts/build-docs.js",
+                    "all":  "node scripts/run-cases.js \u0026\u0026 node scripts/build-docs.js \u0026\u0026 node scripts/verify-bugs.js"
+                },
+    "type":  "commonjs",
+    "devDependencies":  {
+                            "exceljs":  "^4.4.0",
+                            "playwright":  "^1.65.1"
+                        },
+    "license":  "MIT",
+    "author":  "Ammar Alkhatib",
+    "private":  true
+}

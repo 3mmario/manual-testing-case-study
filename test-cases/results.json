@@ -1,0 +1,210 @@
+{
+  "runDate": "2026-11-27",
+  "results": {
+    "TC-001": {
+      "actual": "Products page opened, 6 products listed",
+      "status": "Pass",
+      "evidence": "cases/TC-001.png"
+    },
+    "TC-002": {
+      "actual": "6 tiles, 6 distinct images",
+      "status": "Pass",
+      "evidence": "cases/TC-002.png"
+    },
+    "TC-003": {
+      "actual": "First product: \"Test.allTheThings() T-Shirt (Red)\"; last: \"Sauce Labs Backpack\"",
+      "status": "Pass",
+      "evidence": "cases/TC-003.png"
+    },
+    "TC-004": {
+      "actual": "Prices: $7.99, $9.99, $15.99, $15.99, $29.99, $49.99",
+      "status": "Pass",
+      "evidence": "cases/TC-004.png"
+    },
+    "TC-005": {
+      "actual": "Detail shows \"Sauce Labs Backpack\" $29.99",
+      "status": "Pass",
+      "evidence": "cases/TC-005.png"
+    },
+    "TC-006": {
+      "actual": "Badge 3, 3 Remove buttons, 3 items in cart",
+      "status": "Pass",
+      "evidence": "cases/TC-006.png"
+    },
+    "TC-007": {
+      "actual": "1 item left, badge 1",
+      "status": "Pass",
+      "evidence": "cases/TC-007.png"
+    },
+    "TC-008": {
+      "actual": "Header \"Thank you for your order!\", badge empty",
+      "status": "Pass",
+      "evidence": "cases/TC-008.png"
+    },
+    "TC-009": {
+      "actual": "Message: Epic sadface: You can only access '/inventory.html' when you are logged in.",
+      "status": "Pass",
+      "evidence": "cases/TC-009.png"
+    },
+    "TC-010": {
+      "actual": "Item total $39.98, tax $3.2, total $43.18 (expected item total $39.98)",
+      "status": "Pass",
+      "evidence": "cases/TC-010.png"
+    },
+    "TC-011": {
+      "actual": "Badge 1, 1 Remove button",
+      "status": "Pass",
+      "evidence": "cases/TC-011.png"
+    },
+    "TC-012": {
+      "actual": "URL /cart.html, 1 item",
+      "status": "Pass",
+      "evidence": "cases/TC-012.png"
+    },
+    "TC-013": {
+      "actual": "Badge empty; 4 of 6 buttons show Add to cart, the rest still show Remove until reload. See F-04",
+      "status": "Fail",
+      "evidence": "cases/TC-013.png"
+    },
+    "TC-014": {
+      "actual": "Message: Epic sadface: You can only access '/inventory.html' when you are logged in.",
+      "status": "Pass",
+      "evidence": "cases/TC-014.png"
+    },
+    "TC-015": {
+      "actual": "Checkout step one opened; overview reached with 0 items (/checkout-step-two.html). See F-01",
+      "status": "Fail",
+      "evidence": "cases/TC-015.png"
+    },
+    "TC-016": {
+      "actual": "Message: Epic sadface: Sorry, this user has been locked out.",
+      "status": "Pass",
+      "evidence": "cases/TC-016.png"
+    },
+    "TC-017": {
+      "actual": "Message: Epic sadface: Username and password do not match any user in this service",
+      "status": "Pass",
+      "evidence": "cases/TC-017.png"
+    },
+    "TC-018": {
+      "actual": "Message: Epic sadface: Username and password do not match any user in this service",
+      "status": "Pass",
+      "evidence": "cases/TC-018.png"
+    },
+    "TC-019": {
+      "actual": "Message: Epic sadface: Username is required",
+      "status": "Pass",
+      "evidence": "cases/TC-019.png"
+    },
+    "TC-020": {
+      "actual": "Message: Epic sadface: Password is required",
+      "status": "Pass",
+      "evidence": "cases/TC-020.png"
+    },
+    "TC-021": {
+      "actual": "Message: Epic sadface: Username is required",
+      "status": "Pass",
+      "evidence": "cases/TC-021.png"
+    },
+    "TC-022": {
+      "actual": "Message: Epic sadface: Username and password do not match any user in this service",
+      "status": "Pass",
+      "evidence": "cases/TC-022.png"
+    },
+    "TC-023": {
+      "actual": "Message: Epic sadface: Username and password do not match any user in this service",
+      "status": "Pass",
+      "evidence": "cases/TC-023.png"
+    },
+    "TC-024": {
+      "actual": "Message: Epic sadface: Username and password do not match any user in this service",
+      "status": "Pass",
+      "evidence": "cases/TC-024.png"
+    },
+    "TC-025": {
+      "actual": "Message: Error: First Name is required",
+      "status": "Pass",
+      "evidence": "cases/TC-025.png"
+    },
+    "TC-026": {
+      "actual": "Message: Error: Last Name is required",
+      "status": "Pass",
+      "evidence": "cases/TC-026.png"
+    },
+    "TC-027": {
+      "actual": "Message: Error: Postal Code is required",
+      "status": "Pass",
+      "evidence": "cases/TC-027.png"
+    },
+    "TC-028": {
+      "actual": "Message: Error: First Name is required",
+      "status": "Pass",
+      "evidence": "cases/TC-028.png"
+    },
+    "TC-029": {
+      "actual": "URL /checkout-step-two.html",
+      "status": "Pass",
+      "evidence": "cases/TC-029.png"
+    },
+    "TC-030": {
+      "actual": "Moved on to /checkout-step-two.html with a blank first name. See F-02",
+      "status": "Fail",
+      "evidence": "cases/TC-030.png"
+    },
+    "TC-031": {
+      "actual": "Accepted, overview opened; no maximum length enforced (observation)",
+      "status": "Pass",
+      "evidence": "cases/TC-031.png"
+    },
+    "TC-032": {
+      "actual": "URL /checkout-step-two.html",
+      "status": "Pass",
+      "evidence": "cases/TC-032.png"
+    },
+    "TC-033": {
+      "actual": "1 distinct image file(s) across 6 tiles. See BUG-01",
+      "status": "Fail",
+      "evidence": "cases/TC-033.png"
+    },
+    "TC-034": {
+      "actual": "First product after sort: \"Sauce Labs Backpack\". See BUG-02",
+      "status": "Fail",
+      "evidence": "cases/TC-034.png"
+    },
+    "TC-035": {
+      "actual": "Last name field contains \"\"; message: Error: Last Name is required. See BUG-03",
+      "status": "Fail",
+      "evidence": "cases/TC-035.png"
+    },
+    "TC-036": {
+      "actual": "Badge after add: 2; after remove: 2. See BUG-04",
+      "status": "Fail",
+      "evidence": "cases/TC-036.png"
+    },
+    "TC-037": {
+      "actual": "Final URL /checkout-step-two.html; confirmation not shown. See BUG-05",
+      "status": "Fail",
+      "evidence": "cases/TC-037.png"
+    },
+    "TC-038": {
+      "actual": "standard: $29.99 $9.99 $15.99 $49.99 $7.99 $15.99 | visual: $27.51 $40.96 $0.1 $9.32 $88.53 $78.72. See BUG-06",
+      "status": "Fail",
+      "evidence": "cases/TC-038.png"
+    },
+    "TC-039": {
+      "actual": "Shifted button(s): tile 6: 1029,843 vs 975,843. See BUG-07",
+      "status": "Fail",
+      "evidence": "cases/TC-039.png"
+    },
+    "TC-040": {
+      "actual": "Login took 5215 ms. See BUG-08",
+      "status": "Fail",
+      "evidence": "cases/TC-040.png"
+    },
+    "TC-041": {
+      "actual": "Detail page shows \"Sauce Labs Fleece Jacket\". See F-03",
+      "status": "Fail",
+      "evidence": "cases/TC-041.png"
+    }
+  }
+}

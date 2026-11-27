@@ -1,0 +1,15 @@
+[
+  { "id": "R-01", "area": "Authentication", "text": "A valid user can log in and reaches the product list" },
+  { "id": "R-02", "area": "Authentication", "text": "Invalid, empty or locked-out credentials are rejected with a clear, non-revealing message" },
+  { "id": "R-03", "area": "Session", "text": "Protected pages require a session; logout ends it" },
+  { "id": "R-04", "area": "Catalogue", "text": "Each product shows its own name, price and image" },
+  { "id": "R-05", "area": "Catalogue", "text": "Products can be sorted by name and by price in both directions" },
+  { "id": "R-06", "area": "Catalogue", "text": "A product detail page shows the product that was selected" },
+  { "id": "R-07", "area": "Cart", "text": "Products can be added to and removed from the cart; the badge reflects the cart" },
+  { "id": "R-08", "area": "Checkout", "text": "Checkout step one validates first name, last name and postal code, and cannot start with an empty cart" },
+  { "id": "R-09", "area": "Checkout", "text": "The overview shows correct item total, tax and grand total" },
+  { "id": "R-10", "area": "Checkout", "text": "A completed order shows a confirmation and clears the cart" },
+  { "id": "R-11", "area": "Cart / navigation", "text": "Cart state is kept across navigation; Cancel and Reset behave as labelled" },
+  { "id": "R-12", "area": "Performance", "text": "Login completes within 2 seconds (assumed target; no SLA is published)" },
+  { "id": "R-13", "area": "Visual consistency", "text": "Prices and layout are identical for every user profile" }
+]

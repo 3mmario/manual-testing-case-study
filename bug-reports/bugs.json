@@ -1,0 +1,10 @@
+[
+  { "id": "BUG-01", "title": "problem_user: all six products show the same placeholder image", "severity": "Major", "priority": "High", "user": "problem_user", "tc": "TC-033" },
+  { "id": "BUG-02", "title": "problem_user: sort dropdown has no effect on the product list", "severity": "Major", "priority": "Medium", "user": "problem_user", "tc": "TC-034" },
+  { "id": "BUG-03", "title": "problem_user: Last Name field does not accept input, checkout is blocked", "severity": "Critical", "priority": "High", "user": "problem_user", "tc": "TC-035" },
+  { "id": "BUG-04", "title": "problem_user: third Add to cart is ignored and Remove does nothing", "severity": "Major", "priority": "High", "user": "problem_user", "tc": "TC-036" },
+  { "id": "BUG-05", "title": "error_user: order cannot be completed, Finish does nothing and Last Name is silently dropped", "severity": "Critical", "priority": "High", "user": "error_user", "tc": "TC-037" },
+  { "id": "BUG-06", "title": "visual_user: product prices differ from the catalogue and change on every login", "severity": "Critical", "priority": "High", "user": "visual_user", "tc": "TC-038" },
+  { "id": "BUG-07", "title": "visual_user: Add to cart button of the last product is misaligned", "severity": "Minor", "priority": "Low", "user": "visual_user", "tc": "TC-039" },
+  { "id": "BUG-08", "title": "performance_glitch_user: login takes about 5 to 7 seconds", "severity": "Major", "priority": "Medium", "user": "performance_glitch_user", "tc": "TC-040" }
+]

@@ -1,0 +1,6 @@
+[
+  { "id": "F-01", "user": "standard_user", "tc": "TC-015", "title": "Checkout can be started and completed to the overview with an empty cart", "why": "Not filed as a defect: no written requirement says an empty cart must block checkout. Common e-commerce expectation; needs a product-owner decision." },
+  { "id": "F-02", "user": "standard_user", "tc": "TC-030", "title": "Whitespace-only first name passes checkout validation", "why": "Not filed as a defect: validation rules are not specified. Recommended: trim input before the required-field check." },
+  { "id": "F-03", "user": "problem_user", "tc": "TC-041", "title": "Clicking Sauce Labs Backpack opens the Sauce Labs Fleece Jacket detail page", "why": "Same root-cause family as the other problem_user defects (product-specific behaviour is broken). Kept as a finding to stay within the 8 reports; would be a Major defect in a real project." },
+  { "id": "F-04", "user": "standard_user", "tc": "TC-013", "title": "Reset App State clears the badge but leaves Remove buttons on the product page until reload", "why": "Minor UI-state inconsistency. Not filed: the demo app documents Reset App State as a tester helper, not a customer feature." }
+]

@@ -1,0 +1,50 @@
+{
+  "BUG-01": {
+    "reproduced": true,
+    "detail": "1 distinct image across 6 products"
+  },
+  "BUG-02": {
+    "reproduced": true,
+    "detail": "Name (Z to A) selected, first product still \"Sauce Labs Backpack\""
+  },
+  "BUG-03": {
+    "reproduced": true,
+    "detail": "Last name field value after typing \"Tester\": \"\""
+  },
+  "BUG-04": {
+    "reproduced": true,
+    "detail": "Clicked Add on 3 products, badge 2; clicked Remove, badge 2"
+  },
+  "BUG-05": {
+    "reproduced": true,
+    "detail": "After Finish the URL is still /checkout-step-two.html"
+  },
+  "BUG-06": {
+    "reproduced": true,
+    "detail": "standard $29.99 $9.99 $15.99 $49.99 $7.99 $15.99 | visual $22.62 $51.64 $73.24 $17.17 $19.17 $77.25"
+  },
+  "BUG-07": {
+    "reproduced": true,
+    "detail": "Add to cart x-position: tile 4 = 975px, tile 6 = 1029px"
+  },
+  "BUG-08": {
+    "reproduced": true,
+    "detail": "1.5 s after clicking Login the products page is still empty; product list appeared after 5173 ms"
+  },
+  "F-01": {
+    "reproduced": true,
+    "detail": "Overview reached with an empty cart"
+  },
+  "F-02": {
+    "reproduced": true,
+    "detail": "Blank first name accepted"
+  },
+  "F-03": {
+    "reproduced": true,
+    "detail": "Opened \"Sauce Labs Fleece Jacket\""
+  },
+  "F-04": {
+    "reproduced": true,
+    "detail": "Badge cleared but 2 button(s) still show Remove"
+  }
+}
