@@ -1,10 +1,10 @@
 # Manual testing case study: Swag Labs web shop
 
-[![verify-defects](https://github.com/3mmario/manual-testing-case-study/actions/workflows/verify-defects.yml/badge.svg)](https://github.com/3mmario/manual-testing-case-study/actions/workflows/verify-defects.yml)
+[![verify-defects](https://github.com/ammaralkhatib-qa/manual-testing-case-study/actions/workflows/verify-defects.yml/badge.svg)](https://github.com/ammaralkhatib-qa/manual-testing-case-study/actions/workflows/verify-defects.yml)
 
 A complete, end-to-end manual / SIT test effort on https://www.saucedemo.com, a public demo shop built for testing practice. It shows how I plan, design, execute and report testing, with every result backed by a real run and a screenshot.
 
-**By Ammar Alkhatib**, QA Engineer (ISTQB CTFL 4.0.1), Amman, Jordan. [LinkedIn](https://www.linkedin.com/in/ammaral) | [GitHub](https://github.com/3mmario)
+**By Ammar Alkhatib**, QA Engineer (ISTQB CTFL 4.0.1), Amman, Jordan. [LinkedIn](https://www.linkedin.com/in/ammaral) | [GitHub](https://github.com/ammaralkhatib-qa)
 
 ## Result at a glance
 
